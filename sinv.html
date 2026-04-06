@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saanvi Tayal - AI Innovator & Global Changemaker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        .cta-btn {
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid #667eea;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .sdg-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f9ff;
+            color: #667eea;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+        .video-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        .achievements {
+            margin-top: 1rem;
+        }
+        .achievement {
+            display: block;
+            background: #f0f8ff;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 10px;
+            border-left: 3px solid #667eea;
+            font-size: 0.9rem;
+        }
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Saanvi Tayal</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Saanvi Tayal</h1>
+                <p>18-year-old passionate innovator dedicated to harnessing AI to address critical global challenges</p>
+                <a href="#projects" class="cta-btn">🚀 Explore My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<br><br>
+    <section id="projects" class="container">
+        <h2>Featured AI Projects</h2>
+        <div class="projects-grid">
+            <!-- Oil Spill Detector -->
+            <div class="project-card">
+                <h3>🌊 Oil Spill Detector</h3>
+                <span class="sdg-tag">🏆 TOP 3 INDIA - INTEL GLOBAL IMPACT FEST 2022</span>
+                <a href="https://youtu.be/C2fyie0K35A" target="_blank" class="video-btn">
+                    <i class="fas fa-play-circle"></i> Watch Demo Video (MUST WATCH!)
+                </a>
+                <p><strong>ResNet model (90% accuracy)</strong> using satellite imagery for real-time oil spill detection, localization, and authority alerts. Addresses 1.7B tons ocean contamination.</p>
+                <div class="achievements">
+                    <div class="achievement">🎯 Top 3 from 81K entries across 80+ countries</div>
+                    <div class="achievement">📢 Presented at Niti Aayog to CBSE heads</div>
+                    <div class="achievement">📚 Published in AI Changemaker Book</div>
+                </div>
+                <div style="margin-top: 1rem; font-weight: 600; color: #667eea;">
+                    SDG 13: Climate Action • SDG 14: Life Below Water
+                </div>
+            </div>
+
+            <!-- AI Yoga Guru -->
+            <div class="project-card">
+                <h3>🧘‍♀️ AI Yoga Guru</h3>
+                <span class="sdg-tag">🥈 2ND NATIONAL - CBSE & INTEL</span>
+                <a href="https://youtu.be/Mb7nMfBYu_8" class="video-btn">
+                    <i class="fas fa-play-circle"></i> Watch Demo (1.3K views)
+                </a>
+                <p>AI pose recognizer and corrector preventing yoga injuries.</p>
+                <div class="achievements">
+                    <div class="achievement">🏆 Won I5 HP Laptop prize</div>
+                    <div class="achievement">🌟 Top 100 IRIS National Fair (ISEF representative)</div>
+                    <div class="achievement">🎓 AI4Youth NLP Bootcamp certified</div>
+                </div>
+                <div style="margin-top: 1rem; font-weight: 600; color: #667eea;">SDG 3: Good Health</div>
+            </div>
+
+            <!-- Mental Buddy -->
+            <div class="project-card">
+                <h3>🧠 Mental Buddy</h3>
+                <span class="sdg-tag">🌍 AIYC - WORLD ECONOMIC FORUM</span>
+                <a href="https://youtu.be/sPOGMdBUT3U" class="video-btn" ">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+                <p>Chatbot for teens detecting depression and mental health issues.</p>
+                <div class="achievements">
+                    <div class="achievement">Selected for National WEF AI Youth Chapter</div>
+                </div>
+                <div style="margin-top: 1rem; font-weight: 600; color: #667eea;">SDG 3: Good Health</div>
+            </div>
+
+            <!-- ArchiVision -->
+            <div class="project-card">
+                <h3>🏛️ ArchiVision</h3>
+                <span class="sdg-tag">🏆 TOP 50 YUVAI SOLUTIONS</span>
+                <a href="https://youtu.be/eCH27vdCHfs" class="video-btn" >
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+                <p>AI restoration of broken/old monuments preserving cultural heritage.</p>
+                <div style="margin-top: 1rem; font-weight: 600; color: #667eea;">SDG 11.4: Cultural Heritage</div>
+            </div>
+
+            <!-- Voice of Hands -->
+            <div class="project-card">
+                <h3>✋️ Voice of Hands</h3>
+                <a href="https://youtu.be/DdbHYPwsw9U"class="video-btn">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+                <p>Speech-to-sign language translator making internet accessible for hearing impaired.</p>
+                <div style="margin-top: 1rem; font-weight: 600; color: #667eea;">SDG 10 • SDG 4</div>
+            </div>
+
+            <!-- Cataract Detection -->
+            <div class="project-card">
+                <h3>👁️ Cataract Detection</h3>
+                <span class="sdg-tag">🏆 CHALLENGE OF THE MONTH</span>
+                <a href="https://docs.google.com/document/d/16BF5yb5ctbqhnUyrj9FLjHKeDaiu-NeQiWq4WNJDEGc/edit?usp=sharing" class="video-btn" >
+                    <i class="fas fa-play-circle"></i> View Report
+                </a>
+                <p>Custom YOLO model detecting 4 eye conditions (Normal/Cataract/Glaucoma/Retina).</p>
+                <div style="margin-top: 1rem; font-weight: 600; color: #667eea;">SDG 3: Good Health</div>
+            </div>
+        </div>
+    </section>
+<br><br>
+    <!-- More Projects -->
+    <section class="container">
+        <h2>Additional Impact Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>🖱️ AI Virtual Mouse</h3>
+                <a href="https://www.youtube.com/watch?v=9n6TLxB7PS4" class="video-btn" >📹 1.3K+ Views</a>
+                <p>Hand gesture controlled virtual mouse (CV Bootcamp project).</p>
+                <div style="margin-top: 1rem; font-weight: 600; color: #667eea;">SDG 8</div>
+            </div>
+
+            <div class="project-card">
+                <h3>📖 MagSpace</h3>
+                <span class="sdg-tag">TOP 1000/2L - YOUTH IDEATHON</span>
+                <a href="https://youtu.be/FFvCf016Y_M" class="video-btn"">📹 Watch Demo</a>
+                <p>Flipbook social media platform. Masters' Union CEO Challenge R2.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>🌌 Celestial Body Detection</h3>
+                <a href="https://youtu.be/dw5ii-IViog" class="video-btn" >📹 Watch Demo</a>
+                <p>ML model classifying Star/Quasar/Galaxy from astronomical data.</p>
+            </div>
+        </div>
+    </section>
+<br><br>
+    <!-- Achievements & Academics -->
+    <section id="achievements" class="container">
+        <h2>Academic Excellence & Leadership</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">96.4%</span>
+                CBSE Class 10
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">87.75%</span>
+                CBSE Class 12<br>(Physics, Chemistry, Maths, CS, English)
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">98.78</span>
+                JEE Mains Percentile<br>Session 1 2026
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">AISC</span>
+                Leader<br>AI Student Community
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Collaborate</h2>
+            <p>Ready to create more AI impact for society? Let's connect!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/saanvi-tayal/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Saanvi-Tayal"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/saanvitayal07"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.youtube.com/channel/UCsou8aExsB6o27UEr9G4Ivg"><i class="fab fa-youtube"></i></a>
+                <a href="saanvitayal07@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.9;">saanvitayal07@email.com</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
